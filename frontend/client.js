@@ -1,6 +1,6 @@
 const SOCKET_URL = ['localhost', '127.0.0.1'].includes(window.location.hostname)
     ? 'http://localhost:8000'
-    : 'https://backend-name.onrender.com';
+    : 'https://vibely-backend-5yxv.onrender.com';
 
 const socket = (typeof io === 'function')
     ? io(SOCKET_URL, { autoConnect: false })
