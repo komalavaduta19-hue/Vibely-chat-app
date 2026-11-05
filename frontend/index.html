@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibely</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="orbs" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+    <nav>
+        <a href="#" class="brand">
+            <img src="chat.png" alt="" class="icon">
+            <span class="brand-name">Vibely</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li>
+                <a href="#" class="profile" aria-label="Profile">
+                    <img src="profile.png" alt="" class="profile-icon">
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="msgcont">
+        <!-- <div class="msg"></div>
+        <div class="msg"></div> -->
+        <!-- <div class="typing"></div> -->
+    </div>
+
+    <div class="input">
+        <form action="#" id="send-cont">
+            <input type="text" class="inputbox" placeholder="Type a message">
+            <button class="button" type="submit"><img src="send.png" alt=""></button>
+        </form>
+
+    </div>
+
+    <div class="join-overlay" id="join-overlay">
+        <form class="join-card" id="join-form">
+            <h2>Welcome to Vibely 🎀</h2>
+            <p>Enter your name to join</p>
+            <input type="text" id="join-name" maxlength="20" placeholder="Your name" autocomplete="off" required>
+            <button type="submit">Join chat</button>
+        </form>
+    </div>
+ <script src="https://cdn.jsdelivr.net/npm/socket.io-client@4.8.1/dist/socket.io.min.js"></script>
+<script src="client.js"></script>
+</body>
+
+</html>
