@@ -4,7 +4,7 @@ const io = require('socket.io')(PORT, {
     cors: {
         origin: [
             "http://localhost:3000",
-            "https://YOUR-SITE.netlify.app"
+            "https://vibely-chat-app-frontend.vercel.app"
         ],
         methods: ["GET", "POST"]
     }
@@ -21,7 +21,7 @@ io.on('connection', socket => {
     })
 
     socket.on('send', ({ id, message }, callback) => {
-        if (!users[socket.id]) return          // join kiye bina send nahi
+        if (!users[socket.id]) return         
 
         socket.broadcast.emit('receive', {
             id: id,
@@ -52,7 +52,7 @@ io.on('connection', socket => {
 
     socket.on('disconnect', () => {
         const name = users[socket.id]
-        if (!name) return                      // naam nahi tha to "left" mat bhejo
+        if (!name) return                     
         socket.broadcast.emit('left', name)
         delete users[socket.id]
     })
